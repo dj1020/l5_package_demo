@@ -1,0 +1,45 @@
+{
+    "name": "twinkledj/l5pkg",
+    "description": "demo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ken Lin",
+            "email": "dj1020@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {},
+    "repositories": [
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/BootstrapCMS/sentry"
+        },
+        {
+            "type" : "composer",
+            "url" : "https://dj1020:bitbucket.com/repo"
+        },
+        {
+            "type" : "composer",
+            "url" : "http://localhost/my_repo"
+        }
+    ],
+    "autoload" : {
+        "classmap" : [
+            "database"
+        ],
+        "psr-4" : {
+            "MyLib\\TwkCMS\\" : "src/"
+        }
+    },
+    "scripts" : {
+        "post-install-cmd" : [
+        ],
+        "post-update-cmd" : [
+        ],
+        "post-create-project-cmd" : [
+            "php -r \"copy('.env.example, '.env');\""
+        ]
+    }
+}
